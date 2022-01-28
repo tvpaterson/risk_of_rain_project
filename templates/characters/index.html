@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+{% for character in characters %}
+    <h2>{{character.name}}</h2>
+    <h3>{{character.health}}</h3>
+    <p>{{character.damage}}</p>
+    <p>{{character.armor}}</p>
+    <br>
+{% endfor %}
+
+<button type=submit name="add_character">Create New Character</button>
+
+{% endblock %}

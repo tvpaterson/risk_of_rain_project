@@ -2,7 +2,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 from controllers.characters_controller import characters_blueprint
 
-@app.route('/')
+@app.route('/home')
 def home():
     return render_template('index.html')
 

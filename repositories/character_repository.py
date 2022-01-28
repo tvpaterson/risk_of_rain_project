@@ -16,7 +16,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        character = Character(result['id'], result['name'], result['health'], result['damage'], result['armor'])
+        character = Character(result['name'], result['health'], result['damage'], result['armor'], row['id'])
     return character
 
 def select_all():
@@ -25,7 +25,7 @@ def select_all():
     sql = "SELECT * FROM characters"
     results = run_sql(sql)
     for row in results:
-        character = Character(row['id'], row['name'], row['health'], row['damage'], row['armor'])
+        character = Character(row['name'], row['health'], row['damage'], row['armor'], row['id'])
         characters.append(character)
     return characters
 
