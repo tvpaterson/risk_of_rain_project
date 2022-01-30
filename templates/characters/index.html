@@ -5,13 +5,13 @@
 <div class="character_cards">
     <div class="character_card"> 
         
-       <a href="/characters/{{ character.id }}"><img src="/static/images/ROR_2_Commando.png" alt="" class="card_image"></a>
+       <a href="/characters/{{ character.id }}"><img src="/static/images/ROR_2_Commando.png" class="card_image"></a>
         <div class="character_name">
             <p>{{character.name}}</p>
         </div>
     </div>
     {% endfor %}
     <div>
-    <button type=submit name="add_character">Create New Character</button>
+    <button href="/character/create"type=submit name="add_character">Create New Character</button>
     </div>
 {% endblock %}

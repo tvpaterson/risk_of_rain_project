@@ -6,7 +6,7 @@ def save (item):
     sql = "INSERT INTO items(name, description ) VALUES (%s, %s ) RETURNING id"
     values = [item.name, item.description]
     results = run_sql(sql, values)
-    item.id = results[7]['id']
+    item.id = results[0]['id']
     return item
 
 def select(id):
@@ -16,7 +16,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        item = Item(result['id'], result['name'], result['description'])
+        item = Item(result['name'], result['description'], result['id'])
     return item
 
 def select_all():
@@ -25,7 +25,7 @@ def select_all():
     sql = "SELECT * FROM items"
     results = run_sql(sql)
     for row in results:
-        item = Item(row['id'], row['name'], row['health'], row['damage'], row['armor'])
+        item = Item(row['name'], row['description'], row['id'])
         items.append(item)
     return items
 
