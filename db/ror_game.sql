@@ -15,17 +15,17 @@ CREATE TABLE items (
   description VARCHAR(255)
 );
 
-INSERT INTO characters (id, name, health, damage, armor) VALUES (1, 'Commando', 110, 12, 0);
-INSERT INTO characters (id, name, health, damage, armor) VALUES (2, 'Engineer', 130, 14, 0);
-INSERT INTO characters (id, name, health, damage, armor) VALUES (3, 'Bandit', 110, 12, 0);
-INSERT INTO characters (id, name, health, damage, armor) VALUES (4, 'Captain', 110, 12, 0);
-INSERT INTO characters (id, name, health, damage, armor) VALUES (5, 'Acrid', 160, 15, 20);
-INSERT INTO characters (id, name, health, damage, armor) VALUES (6, 'Artificer', 110, 12, 0);
-INSERT INTO characters (id, name, health, damage, armor) VALUES (7, 'Heretic', 440, 18, 0);
-INSERT INTO characters (id, name, health, damage, armor) VALUES (8, 'Huntress', 90, 12, 0);
-INSERT INTO characters (id, name, health, damage, armor) VALUES (9, 'Loader', 160, 12, 20);
-INSERT INTO characters (id, name, health, damage, armor) VALUES (10, 'Mercenary', 110, 12, 20);
-INSERT INTO characters (id, name, health, damage, armor) VALUES (11, 'Mul-T', 200, 11, 12);
+INSERT INTO characters (id, name, health, damage, armor) VALUES (1, 'COMMANDO', 110, 12, 0);
+INSERT INTO characters (id, name, health, damage, armor) VALUES (2, 'ENGINEER', 130, 14, 0);
+INSERT INTO characters (id, name, health, damage, armor) VALUES (3, 'BANDIT', 110, 12, 0);
+INSERT INTO characters (id, name, health, damage, armor) VALUES (4, 'CAPTIAN', 110, 12, 0);
+INSERT INTO characters (id, name, health, damage, armor) VALUES (5, 'ACRID', 160, 15, 20);
+INSERT INTO characters (id, name, health, damage, armor) VALUES (6, 'ARTIFICER', 110, 12, 0);
+INSERT INTO characters (id, name, health, damage, armor) VALUES (7, 'HERETIC', 440, 18, 0);
+INSERT INTO characters (id, name, health, damage, armor) VALUES (8, 'HUNTRESS', 90, 12, 0);
+INSERT INTO characters (id, name, health, damage, armor) VALUES (9, 'LOADER', 160, 12, 20);
+INSERT INTO characters (id, name, health, damage, armor) VALUES (10, 'MARCENARY', 110, 12, 20);
+INSERT INTO characters (id, name, health, damage, armor) VALUES (11, 'MUL-T', 200, 11, 12);
 INSERT INTO characters (id, name, health, damage, armor) VALUES (12, 'REX', 130, 12, 20);
 
 

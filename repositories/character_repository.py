@@ -4,9 +4,9 @@ from models.item import Item
 
 def save (character):
     sql = "INSERT INTO users(name, health, damage, armor ) VALUES (%s, %s, %s, %s ) RETURNING id"
-    values = [character.name]
+    values = [character.name, character.health, character.damage, character.armor]
     results = run_sql(sql, values)
-    character.id = results[0]['id']
+    character.id = results[1]['id']
     return character
 
 def select(id):
@@ -16,7 +16,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        character = Character(result['name'], result['health'], result['damage'], result['armor'], row['id'])
+        character = Character(result['name'], result['health'], result['damage'], result['armor'], result['id'])
     return character
 
 def select_all():

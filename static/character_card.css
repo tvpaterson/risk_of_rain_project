@@ -1,0 +1,26 @@
+.title_text{
+    font-family: 'Zen Kurenaido', sans-serif;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.character_cards{
+    display: grid;
+    /* margin: 0 auto; */
+    /* grid-template-columns: repeat(3, 3fr); */
+}
+
+.character_card{
+    box-shadow: 0 0 3px rgb(228, 228, 228);
+    padding: 10px;
+}
+
+.character_name{
+    font-family: 'Zen Kurenaido', sans-serif;
+    text-align: center;
+}
+
+.card_image{
+    display: block ;
+    width: 100%;
+}

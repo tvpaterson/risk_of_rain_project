@@ -3,12 +3,12 @@
     box-sizing: border-box;
     margin: auto;
     padding: auto;
-    background-color:#f3f3f3 ;
+    background-color:#505050 ;
 }
 li, a{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Zen Kurenaido', sans-serif;
     text-decoration: none;
-    color: black;
+    color: whitesmoke;
 }
 header {
     display: flex;
@@ -33,36 +33,32 @@ header {
 }
 
 .nav_links li a:hover{
-    color: #624a85;
+    color: #9160df;
 }
 
 
-/* home page */
-
-/* .logo{
-    display: inline-block;
-    justify-content: center;
-    padding: auto;
-    margin: auto;
-    text-align: center;
-} */
-
 .homepage {
-    display: flex;
+    display: flexbox;
     justify-content: center;
+    text-align: center;
     padding: auto;
-    margin: 2%;
+    margin: 0;
     width: auto; 
     height: auto; 
 } 
 
 .logo{
+
     width: 800px;
+    align-content: center;
 }
 
 .hometext{
     width: 800px;
-    display: inline-flex;
+    display: flex;
     text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    color: whitesmoke;
 }
 
