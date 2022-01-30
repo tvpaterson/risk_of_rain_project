@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>{{chracter.name}}</h1>
+{{character.name}}
+<p>HP: {{character.health}}</p>
+<p> DMG: {{character.damage}} </p>
+<p> ARMOR: {{character.armor}}</p>
 
-{% endblock }
+{% endblock %}
