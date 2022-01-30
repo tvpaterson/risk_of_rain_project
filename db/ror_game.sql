@@ -12,6 +12,8 @@ CREATE TABLE characters (
 CREATE TABLE items (
   id SERIAL PRIMARY KEY,  
   name VARCHAR(255),
+  attribute VARCHAR(255),
+  value INT,
   description VARCHAR(255)
 );
 
@@ -29,12 +31,11 @@ INSERT INTO characters (id, name, health, damage, armor) VALUES (11, 'MUL-T', 20
 INSERT INTO characters (id, name, health, damage, armor) VALUES (12, 'REX', 130, 12, 20);
 
 
-INSERT INTO items (id, name, description) VALUES (1, 'Sticky Bomb', 'Throw sticky bomb that deals 10 damage');
-INSERT INTO items (id, name, description) VALUES (2, 'Topaz Brooch', 'Gain temporary 20 armor');
-INSERT INTO items (id, name, description) VALUES (3, 'Medkit', 'Gain 20 health');
-INSERT INTO items (id, name, description) VALUES (4, 'Bison Steak', 'Increase health by 25');
-INSERT INTO items (id, name, description) VALUES (5, 'Ukulele', 'Permanently increase damage by 100');
-INSERT INTO items (id, name, description) VALUES (6, 'Glasses', 'Look sick af');
+INSERT INTO items (id, name, attribute, value, description) VALUES (1, 'Sticky Bomb', 'DMG', 10, 'Chance to throw sticky bomb');
+INSERT INTO items (id, name, attribute, value, description) VALUES (2, 'Topaz Brooch', 'ARM', 20, 'Gain temporary armor');
+INSERT INTO items (id, name, attribute, value, description) VALUES (3, 'Medkit', 'HP', 20, 'Gain 20 health');
+INSERT INTO items (id, name, attribute, value, description) VALUES (4, 'Bison Steak', 'HP', 25, 'Increase health by 25');
+INSERT INTO items (id, name, attribute, value, description) VALUES (5, 'Ukulele', 'DMG', 100, 'Permanently increase damage by 100');
 
 
 SELECT * FROM characters;
