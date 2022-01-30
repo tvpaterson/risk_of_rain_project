@@ -3,8 +3,8 @@ from models.character import Character
 from models.item import Item
 
 def save (item):
-    sql = "INSERT INTO items(name, description ) VALUES (%s, %s ) RETURNING id"
-    values = [item.name, item.description]
+    sql = "INSERT INTO items(name, attribute, value, description ) VALUES (%s, %s, %s, %s ) RETURNING id"
+    values = [item.name, item.attribute, item.value, item.description]
     results = run_sql(sql, values)
     item.id = results[0]['id']
     return item
@@ -16,7 +16,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        item = Item(result['name'], result['description'], result['id'])
+        item = Item(result['name'], result['attribute'], result['value'], result['description'], result['id'])
     return item
 
 def select_all():
@@ -25,7 +25,7 @@ def select_all():
     sql = "SELECT * FROM items"
     results = run_sql(sql)
     for row in results:
-        item = Item(row['name'], row['description'], row['id'])
+        item = Item(row['name'], row['attribute'], row['value'], row['description'], row['id'])
         items.append(item)
     return items
 

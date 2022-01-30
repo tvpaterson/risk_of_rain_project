@@ -2,15 +2,15 @@ from db.run_sql import run_sql
 from models.character import Character
 from models.item import Item
 
-def save (character):
-    sql = "INSERT INTO users(name, health, damage, armor ) VALUES (%s, %s, %s, %s ) RETURNING id"
+def save(character):
+    sql = "INSERT INTO characters (name, health, damage, armor ) VALUES (%s, %s, %s, %s ) RETURNING id"
     values = [character.name, character.health, character.damage, character.armor]
     results = run_sql(sql, values)
     character.id = results[0]['id']
     return character
 
 def select(id):
-    
+    character = None
     sql = "SELECT * FROM characters WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]

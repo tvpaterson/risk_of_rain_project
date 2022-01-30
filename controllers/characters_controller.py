@@ -1,4 +1,3 @@
-from crypt import methods
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.character import Character
@@ -15,4 +14,22 @@ def all_characters():
 def show_character(id):
     character = character_repository.select(id)
     return render_template("characters/show.html", character = character)
+    
+@characters_blueprint.route("/characters/create", methods=["GET"])
+def new_character():
+    character = character_repository.select_all()
+    return render_template("characters/create.html", character = character)
 
+
+
+@characters_blueprint.route("/characters", methods=['POST'])
+def create_character():
+    name = request.form['character_name']
+    health = request.form['character_health']
+    damage = request.form['character_damage']
+    armor = request.form['character_armor']
+    id = request.form['character_id']
+    new_character = Character(name, health, damage, armor, id)
+    character_repository.save(new_character)
+    return redirect("/characters")
+    

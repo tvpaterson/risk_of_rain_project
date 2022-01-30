@@ -1,18 +1,23 @@
-.title_text{
-    font-family: 'Zen Kurenaido', sans-serif;
-    text-align: center;
-    color: whitesmoke;
-}
-
 .character_cards{
     display: grid;
-    /* margin: 0 auto; */
-    /* grid-template-columns: repeat(3, 3fr); */
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 1rem;
+
 }
 
 .character_card{
-    box-shadow: 0 0 3px rgb(228, 228, 228);
-    padding: 10px;
+    text-align: center;
+    /* box-shadow: 0 0 5px rgb(228, 228, 228); */
+ 
+    border-radius: 4px;
+     
+    padding: .5rem;
+}
+
+.character_card a:hover{
+    color: #9160df;
+
 }
 
 .character_name{
@@ -23,4 +28,12 @@
 .card_image{
     display: block ;
     width: 100%;
+}
+
+.create-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    
 }
