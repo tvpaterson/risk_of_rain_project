@@ -4,16 +4,27 @@
 <h1>New Item</h1>
 <div class="item">
 <form action="/items" method="post">
-  <input placeholder="Name" type="text" id="name" name="character_name" required autofocus>
+  <input placeholder="Name" type="text" id="item_name" name="item_name" required autofocus>
   <br>
-  <input placeholder="Description" type="text" id="description" name="item_description" required autofocus>
+  <select name="item_attribute" id="item">
+      <option>HP</option>
+      <option>DMG</option>
+      <option>ARM</option>
+    </select>
+    <br>
+    <input placeholder="Value" type="number" id="value" name="item_value" required autofocus>
+    <br>
+    <input placeholder="Description" type="text" id="description" name="item_description" required autofocus>
+    <br>
+    <input placeholder="I.D" type="number" id="id" name="item_id" required autofocus>
+
   <br>
-  <select placeholder="Damage" type="number" id="damage" name="character_damage" required autofocus>
+  <!-- <select placeholder="Damage" type="number" id="damage" name="character_damage" required autofocus>
   <br>
   <input placeholder="Armor" type="number" id="armor" name="character_armor" required autofocus>
   <br>
   <input placeholder="I.D" type="number" id="id" name="character_id" required autofocus>
-  <br>
+  <br> -->
   <input type='submit' value="Create">
 </div>
 {% endblock %}

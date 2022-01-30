@@ -8,12 +8,16 @@
             <ul>
                 <br>
                 <p>{{items.name}}</p>
-                <p>{{items.description}}</p>
+                <b>{{items.attribute}}</b>
+                <p>{{items.value}}</p>
+                <i>{{items.description}}</i>
                 <p></p>
                 <br>
             </ul>
         </div>
     </div>
+    <form action="/items/{{ items.id }}/delete" method="POST">
+        <input class="" type="submit" value="delete" /></form>
     
     {% endfor %}
     

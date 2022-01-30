@@ -6,4 +6,7 @@
 <p>DMG: {{character.damage}} </p>
 <p>ARM: {{character.armor}}</p>
 
+<form action="/character/{{ character.id }}/delete" method="POST">
+    <input class="" type="submit" value="delete">
+</form>
 {% endblock %}

@@ -10,6 +10,7 @@ def all_items():
     items = item_repository.select_all()
     return render_template("/items/index.html", items = items)
 
+@items_blueprint.route("/items/create")
 def new_item():
     item = item_repository.select_all()
     return render_template("items/create.html", item = item)
@@ -25,4 +26,9 @@ def create_item():
     new_item = Item(name, attribute, value, description, id)
     item_repository.save(new_item)
     return redirect("/items")
+
+@items_blueprint.route("/items/<id>/delete", methods=['POST'])
+def delete_item(id):
+    item_repository.delete(id)
+    return redirect('/items')
     

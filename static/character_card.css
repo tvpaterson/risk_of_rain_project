@@ -37,3 +37,10 @@
     height: 50px;
     
 }
+
+.create-button{
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}

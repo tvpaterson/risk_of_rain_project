@@ -21,7 +21,6 @@ def new_character():
     return render_template("characters/create.html", character = character)
 
 
-
 @characters_blueprint.route("/characters", methods=['POST'])
 def create_character():
     name = request.form['character_name']
@@ -32,4 +31,9 @@ def create_character():
     new_character = Character(name, health, damage, armor, id)
     character_repository.save(new_character)
     return redirect("/characters")
+    
+@characters_blueprint.route("/characters/<id>/delete", methods=['POST'])
+def delete_character(id):
+    character_repository.delete(id)
+    return redirect('/characters')
     

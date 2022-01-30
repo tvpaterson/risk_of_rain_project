@@ -29,6 +29,12 @@ def select_all():
         characters.append(character)
     return characters
 
+
+def delete(id):
+    sql = "DELETE FROM characters WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
 def delete_all():
     sql = "DELETE FROM characters"
     run_sql(sql)

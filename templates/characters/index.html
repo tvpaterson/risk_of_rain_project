@@ -6,7 +6,14 @@
     <div class="character_card">
         <h3><a href="characters/{{ character.id }}">{{character.name}}</a></h3>
     </div>
-{% endfor %}
+    <br>
+
+    {% endfor %}
+    <div>
+    <button>
+        <a href="/characters/create" class="create-button" type=submit name="add_character">Create New Character</a>
+    </button>
+</div>
 <!-- <div class="character_cards">
     <div class="character_card"> 
        <a href="/characters/{{ characters.id }}"><img src="/static/images/ROR_2_Commando.png" alt="" class="card_image"></a>
@@ -106,6 +113,5 @@
     </div>
 </div>  -->
 
-<br>
-<a href="/characters/create" class="create-button" type=submit name="add_character">Create New Character</a>
-{% endblock %}
+
+    {% endblock %}
