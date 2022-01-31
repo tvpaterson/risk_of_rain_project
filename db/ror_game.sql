@@ -18,7 +18,7 @@ CREATE TABLE items (
   description VARCHAR(255)
 );
 
-CREATE TABLE inventory (
+CREATE TABLE inventories (
   id SERIAL PRIMARY KEY,
   character_id INT REFERENCES characters(id) ON DELETE CASCADE,
   item_id INT REFERENCES items(id) ON DELETE CASCADE

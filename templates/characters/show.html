@@ -13,27 +13,9 @@
     <h3> INVENTORY </h3>
 </div>
 <br>
-
-    <table>
-        <tr>
-            <th>NAME</th>
-            <th>ATTRIBUTE</th>
-            <th>VALUE</th>
-            <th>DESCRIPTION</th>
-        </tr>
-        <tr>
-            <td>Sticky Bomb</td>
-            <td>DMG</td>
-            <td>50</td>
-            <td>Chance to throw a sticky bomb</td>
-        </tr>
-        <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-        </tr>
-    </table>
-</thead>
+    {% for item in inventory %}
+        {{inventory}}
+    {% endfor %}
 
 <form action="/characters/{{ character.id }}/delete" method="POST">
     <input class="create-button" type="submit" value="Delete">
