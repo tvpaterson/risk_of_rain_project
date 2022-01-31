@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.character import Character
 import repositories.character_repository as character_repository
+import pdb
 
 characters_blueprint = Blueprint("character", __name__)
 

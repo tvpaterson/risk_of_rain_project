@@ -4,13 +4,12 @@ from models.item import Item
 import pdb
 
 def save(character):
-    sql = 'INSERT INTO characters (name, health, damage, armor ) VALUES (%s, %s, %s, %s ) RETURNING *'
+    sql = 'INSERT INTO characters (name, health, damage, armor ) VALUES (%s, %s, %s, %s ) RETURNING id'
     values = [character.name, character.health, character.damage, character.armor]
     results = run_sql(sql, values)
-    # pdb.set_trace()
-
-    character.id = results[0][0]
+    character.id = results[0]['id']
     return character
+
 
 def select(id):
     character = None
@@ -31,6 +30,9 @@ def select_all():
         character = Character(row['name'], row['health'], row['damage'], row['armor'], row['id'])
         characters.append(character)
     return characters
+
+
+
 
 
 def delete(id):
