@@ -36,4 +36,5 @@ def create_character():
 def delete_character(id):
     character_repository.delete(id)
     return redirect('/characters')
+
     
