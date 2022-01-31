@@ -6,6 +6,6 @@ class Character:
         self.health = health
         self.damage = damage
         self.armor = armor
-        self.inventory = []
+        # self.inventory = []
         self.id = id
         
