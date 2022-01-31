@@ -27,8 +27,8 @@ def create_character():
     health = request.form['character_health']
     damage = request.form['character_damage']
     armor = request.form['character_armor']
-    id = request.form['character_id']
-    new_character = Character(name, health, damage, armor, id)
+    # id = request.form['character_id']
+    new_character = Character(name, health, damage, armor)
     character_repository.save(new_character)
     return redirect("/characters")
     
