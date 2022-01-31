@@ -24,10 +24,9 @@ def new_character():
 @characters_blueprint.route("/characters", methods=['POST'])
 def create_character():
     name = request.form['character_name']
-    health = request.form['character_health']
-    damage = request.form['character_damage']
-    armor = request.form['character_armor']
-    # id = request.form['character_id']
+    health = int(request.form['character_health'])
+    damage = int(request.form['character_damage'])
+    armor = int(request.form['character_armor'])
     new_character = Character(name, health, damage, armor)
     character_repository.save(new_character)
     return redirect("/characters")

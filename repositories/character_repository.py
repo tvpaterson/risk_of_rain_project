@@ -7,7 +7,9 @@ def save(character):
     sql = 'INSERT INTO characters (name, health, damage, armor ) VALUES (%s, %s, %s, %s ) RETURNING *'
     values = [character.name, character.health, character.damage, character.armor]
     results = run_sql(sql, values)
-    character.id = results[0]['id']
+    # pdb.set_trace()
+
+    character.id = results[0][0]
     return character
 
 def select(id):

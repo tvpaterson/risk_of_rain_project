@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.item import Item
 import repositories.item_repository as item_repository
+import pdb
 
 items_blueprint = Blueprint("item", __name__)
 
@@ -20,8 +21,9 @@ def new_item():
 def create_item():
     name = request.form['item_name']
     attribute = request.form['item_attribute']
-    value = request.form['item_value']
+    value = int(request.form['item_value'])
     description = request.form['item_description']
+    # pdb.set_trace()
     # id = request.form['item_id']
     new_item = Item(name, attribute, value, description)
     item_repository.save(new_item)

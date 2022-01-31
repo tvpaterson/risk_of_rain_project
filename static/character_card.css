@@ -30,17 +30,16 @@
     width: 100%;
 }
 
-.create-button{
+.center-button{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    
+    text-align: center;
+
 }
 
 .create-button{
-    display: flexbox;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    height: 50px;
+    font-family: 'Zen Kurenaido', sans-serif;
+    text-align: center;
+    
 }

@@ -1,4 +1,17 @@
 .info {
     font-family: 'Zen Kurenaido', sans-serif;
     text-align: center;
+    color: whitesmoke;
+}
+
+.center-show-char{
+    font-family: 'Zen Kurenaido', sans-serif;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.char-info-title{
+    font-family: 'Zen Kurenaido', sans-serif;
+    text-align: center;
+    color: whitesmoke;
 }

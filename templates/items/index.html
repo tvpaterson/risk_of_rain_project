@@ -19,8 +19,10 @@
     <form action="/items/{{ items.id }}/delete" method="POST">
         <input class="item-delete" type="submit" value="delete"/></form>
     {% endfor %}
-        
+    <br>
+    <div class="center-button">
+    <button>
         <a href="/items/create" class="create-button" type=submit name="add_item">Create New Item</a>
-    
-
+    </button>
+    </div>
 {% endblock %}

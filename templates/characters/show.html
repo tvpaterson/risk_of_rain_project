@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='styling.css') }}">
-
+<div class="center-show-char">
 <h3>{{character.name}}</h3>
 <p>HP: {{character.health}}</p>
 <p>DMG: {{character.damage}} </p>
 <p>ARM: {{character.armor}}</p>
-
+</div>
+<br>
+<div class="center-button">
 <form action="/characters/{{ character.id }}/delete" method="POST">
-    <input class="" type="submit" value="Delete">
+    <input class="create-button" type="submit" value="Delete">
 </form>
+</div>
 {% endblock %}

@@ -1,3 +1,4 @@
+DROP TABLE inventory;
 DROP TABLE items;
 DROP TABLE characters;
 
@@ -17,6 +18,13 @@ CREATE TABLE items (
   description VARCHAR(255)
 );
 
+CREATE TABLE inventory (
+  id SERIAL PRIMARY KEY,
+  character_id INT REFERENCES characters(id) ON DELETE CASCADE
+  item_id INT REFERENCES items(id) ON DELETE CASCADE
+  items
+);
+
 INSERT INTO characters (id, name, health, damage, armor) VALUES (1, 'COMMANDO', 110, 12, 0);
 INSERT INTO characters (id, name, health, damage, armor) VALUES (2, 'ENGINEER', 130, 14, 0);
 INSERT INTO characters (id, name, health, damage, armor) VALUES (3, 'BANDIT', 110, 12, 0);
@@ -26,7 +34,7 @@ INSERT INTO characters (id, name, health, damage, armor) VALUES (6, 'ARTIFICER',
 INSERT INTO characters (id, name, health, damage, armor) VALUES (7, 'HERETIC', 440, 18, 0);
 INSERT INTO characters (id, name, health, damage, armor) VALUES (8, 'HUNTRESS', 90, 12, 0);
 INSERT INTO characters (id, name, health, damage, armor) VALUES (9, 'LOADER', 160, 12, 20);
-INSERT INTO characters (id, name, health, damage, armor) VALUES (10, 'MARCENARY', 110, 12, 20);
+INSERT INTO characters (id, name, health, damage, armor) VALUES (10, 'MERCENARY', 110, 12, 20);
 INSERT INTO characters (id, name, health, damage, armor) VALUES (11, 'MUL-T', 200, 11, 12);
 INSERT INTO characters (id, name, health, damage, armor) VALUES (12, 'REX', 130, 12, 20);
 
@@ -40,3 +48,4 @@ INSERT INTO items (id, name, attribute, value, description) VALUES (5, 'Ukulele'
 
 SELECT * FROM characters;
 SELECT * FROM items;
+SELECT * FROM inventory;
