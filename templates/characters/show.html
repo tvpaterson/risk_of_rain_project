@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styling.css') }}">
 
 <h3>{{character.name}}</h3>
 <p>HP: {{character.health}}</p>

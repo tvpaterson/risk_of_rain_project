@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styling.css') }}">
 <h1>New Character</h1>
 <div class="info">
 <form action="/characters" method="post">

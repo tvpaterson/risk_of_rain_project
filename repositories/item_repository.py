@@ -3,10 +3,10 @@ from models.character import Character
 from models.item import Item
 
 def save(item):
-    sql = "INSERT INTO items(name, attribute, value, description ) VALUES (%s, %s, %s, %s ) RETURNING *"
+    sql = 'INSERT INTO items(name, attribute, value, description ) VALUES (%s, %s, %s, %s ) RETURNING *'
     values = [item.name, item.attribute, item.value, item.description]
     results = run_sql(sql, values)
-    item.id = results[0]['id']
+    item.id = results[0]["id"]
     return item
 
 def select(id):
