@@ -23,8 +23,6 @@ def create_item():
     attribute = request.form['item_attribute']
     value = int(request.form['item_value'])
     description = request.form['item_description']
-    # pdb.set_trace()
-    # id = request.form['item_id']
     new_item = Item(name, attribute, value, description)
     item_repository.save(new_item)
     return redirect("/items")

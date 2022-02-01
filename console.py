@@ -28,23 +28,21 @@ character_repository.save(character5)
 character6 = Character('ARTIFICER', 110, 12, 0)
 character_repository.save(character6)
 
-character7 = Character('HERETIC', 110, 12, 0)
+character7 = Character('HUNTRESS', 110, 12, 0)
 character_repository.save(character7)
 
-character8 = Character('HUNTRESS', 110, 12, 0)
+character8 = Character('LOADER', 110, 12, 0)
 character_repository.save(character8)
 
-character9 = Character('LOADER', 110, 12, 0)
+character9 = Character('MERCENARY', 110, 12, 0)
 character_repository.save(character9)
 
-character10 = Character('MERCENARY', 110, 12, 0)
+character10 = Character('MUL-T', 110, 12, 0)
 character_repository.save(character10)
 
-character11 = Character('MUL-T', 110, 12, 0)
+character11 = Character('REX', 110, 12, 0)
 character_repository.save(character11)
 
-character12 = Character('REX', 110, 12, 0)
-character_repository.save(character12)
 
 item1 = Item('Sticky Bomb', 'DMG', 10, 'Chance to throw sticky bomb', character1)
 item_repository.save(item1)
@@ -66,6 +64,31 @@ item_repository.save(item6)
 
 item7 = Item('Topaz Brooch', 'ARM', 20, 'Gain temporary armor', character2)
 item_repository.save(item7)
+
+item8 = Item('Topaz Brooch', 'ARM', 20, 'Gain temporary armor', character3)
+item_repository.save(item8)
+
+item9 = Item('Medkit', 'HP', 20, 'Gain 20 health', character3)
+item_repository.save(item9)
+
+item10 = Item('Bison Steak', 'HP', 25, 'Increase health by 25', character4)
+item_repository.save(item10)
+
+item11 = Item('Ukulele', 'DMG', 100, 'Permanently increase damage by 100', character4)
+item_repository.save(item11)
+
+item12 = Item('Medkit', 'HP', 20, 'Gain 20 health', character5)
+item_repository.save(item12)
+
+item13 = Item('Ukulele', 'DMG', 100, 'Permanently increase damage by 100', character5)
+item_repository.save(item13)
+
+item14 = Item('Topaz Brooch', 'ARM', 20, 'Gain temporary armor', character6)
+item_repository.save(item14)
+
+item15 = Item('Sticky Bomb', 'DMG', 10, 'Chance to throw sticky bomb', character7)
+item_repository.save(item15)
+
 
 # inventory1 = Inventory(character1, item1)
 # inventory_repository.save(inventory1)

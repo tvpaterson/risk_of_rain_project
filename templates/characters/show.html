@@ -39,7 +39,10 @@
             <td>{{item.name}} </td>
             <td> {{item.attribute}} </td>
             <td> {{item.value}} </td>
-            <td><button class="btn"><i class="fa fa-trash"></i></button></td>
+            <td> <form action="/items/{{item.id}}/delete" method="POST">
+                <button class="btn"><i class="fa fa-trash"></i></button>
+                </form></td>
+            
             <br>
             {% endfor %} 
             

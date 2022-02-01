@@ -56,3 +56,8 @@ def items(id):
         item = Item(result['name'], result['attribute'], result['value'], result['description'], character, result['id'])
         items.append(item)
     return items
+
+# def delete_item(id):
+#     sql = "DELETE FROM characters WHERE item_id = %s"
+#     values = [id]
+#     run_sql(sql, values)

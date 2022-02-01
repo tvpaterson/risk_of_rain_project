@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.character import Character
 import repositories.character_repository as character_repository
+import repositories.item_repository as item_repository
 import pdb
 
 characters_blueprint = Blueprint("character", __name__)
@@ -52,4 +53,9 @@ def create_character():
 def delete_character(id):
     character_repository.delete(id)
     return redirect('/characters')
+
+@characters_blueprint.route("/items/<id>/delete", methods=['POST'])
+def delete_item(id):
+    item_repository.delete(id)
+    return redirect("/characters")
     
