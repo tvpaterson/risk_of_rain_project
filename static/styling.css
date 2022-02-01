@@ -62,3 +62,16 @@ header {
     color: whitesmoke;
 }
 
+.btn{
+    display: inline;
+}
+
+.item-list{
+    display: flex;
+    text-align: center;
+}
+
+.inventory-title{
+    color: whitesmoke;
+    font-family: 'Zen Kurenaido', sans-serif;
+}

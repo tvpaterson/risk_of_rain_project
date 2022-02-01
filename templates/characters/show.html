@@ -10,13 +10,19 @@
 <br>
 <div class="center-button">
     
-    <h3> INVENTORY </h3>
+    <h3 class="inventory-title"> INVENTORY </h3>
 </div>
 <br>
-    {% for item in inventory %}
-        {{inventory}}
-    {% endfor %}
-
+ <!-- INVENTORY LOOK GOES HERE --> 
+ <div class="item-list">
+ <ul>
+     <li> Sticky Bomb</li><button class="btn"><i class="fa fa-trash"></i></button>
+     <li> Bison Steak</li><button class="btn"><i class="fa fa-trash"></i></button>
+     <li> Missle launcher</li><button class="btn"><i class="fa fa-trash"></i></button>
+     <li> Big Gun</li><button class="btn"><i class="fa fa-trash"></i></button>
+ </ul>
+</div>
+<br>
 <form action="/characters/{{ character.id }}/delete" method="POST">
     <input class="create-button" type="submit" value="Delete">
 </form>
