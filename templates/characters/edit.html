@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styling.css') }}">
+
+<form action="/characters/{{character.id}}/update" method="post">
+    <label for="name">NAME:</label>
+    <input value="{{character.name}}"type="text" id="name" name="character_name" required autofocus>
+    <br>
+    <label for="hp"> HP:</label>
+    <input value="{{character.health}}"type="text" id="hp" name="character_health" required autofocus>
+    <br>
+    <label for="dmg"> DMG:</label>
+    <input value="{{character.damage}}"type="text" id="dmg" name="character_damage" required autofocus>
+    <br>
+    <label for="hp"> ARM:</label>
+    <input value="{{character.armor}}"type="text" id="arm" name="character_armor" required autofocus>
+
+    <button type='submit'>Update</button>
+  </div>
+{% endblock %}
+
+<!-- <form action="/tasks/{{task.id}}" method="post">
+    <div>
+      <label for="description">Description:</label>
+      <input type="text" id="description" name="description" value="{{task.description}}" required autofocus>
+    </div> -->

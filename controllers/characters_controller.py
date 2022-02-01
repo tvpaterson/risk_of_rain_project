@@ -1,3 +1,4 @@
+from crypt import methods
 from pickletools import read_unicodestring1
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
@@ -22,10 +23,21 @@ def new_character():
     character = character_repository.select_all()
     return render_template("characters/create.html", character = character)
 
-@characters_blueprint.route("/characters/<id>/edit")
-def edit_character():
-    character = character_repository.update()
-    return render_template("characters/edit.html", character = character)
+@characters_blueprint.route("/characters/<id>/edit/", methods=['GET'])
+def edit_character(id):
+    character = character_repository.select(id)
+    return render_template("/characters/edit.html", character = character)
+
+
+@characters_blueprint.route("/characters/<id>/update", methods=['POST'])
+def update_character(id):
+    name = request.form['character_name']
+    health = request.form['character_health']
+    damage = request.form['character_damage']
+    armor = request.form['character_armor']
+    character = Character(name, health, damage, armor, id)
+    character_repository.update(character)
+    return redirect('/characters')
 
 @characters_blueprint.route("/characters", methods=['POST'])
 def create_character():

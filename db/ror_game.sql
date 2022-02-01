@@ -1,4 +1,3 @@
-DROP TABLE inventory;
 DROP TABLE items;
 DROP TABLE characters;
 
@@ -17,13 +16,5 @@ CREATE TABLE items (
   value INT,
   description VARCHAR(255)
 );
-
-CREATE TABLE inventories (
-  id SERIAL PRIMARY KEY,
-  character_id INT REFERENCES characters(id) ON DELETE CASCADE,
-  item_id INT REFERENCES items(id) ON DELETE CASCADE
-
-);
-
 
 

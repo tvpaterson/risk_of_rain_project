@@ -30,14 +30,11 @@ def select_all():
         character = Character(row['name'], row['health'], row['damage'], row['armor'], row['id'])
         characters.append(character)
     return characters
-    
 
 def update(character):
     sql = "UPDATE characters SET (name, health, damage, armor) = (%s, %s, %s, %s) WHERE id = %s"
-    values = [character.name, character.health, character.damage, character.armor, character.id ]
+    values = [character.name, character.health, character.damage, character.armor, character.id]
     run_sql(sql, values)
-
-
 
 def delete(id):
     sql = "DELETE FROM characters WHERE id = %s"
