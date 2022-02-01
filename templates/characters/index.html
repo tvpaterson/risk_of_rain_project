@@ -3,11 +3,15 @@
 {% block content %}
 
 {% for character in characters %}
+<div class="all-characters">
+<div class="character-image">
+    <img src="/static/images/{{character.name}}.png">
+</div>
     <div class="character_card">
         <h3><a href="/characters/{{ character.id }}">{{character.name}}</a></h3>
     </div>
     <br>
-
+</div>
     {% endfor %}
 <div class="center-button">
     <button>

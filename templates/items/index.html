@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="/static/items.css">
 {% extends 'base.html' %}
 {% block content %}
-
 {% for items in items %}
+
     <div class="items">
         <div class="item">
             <ul>
@@ -15,9 +15,9 @@
                 <br>
             </ul>
         </div>
-    </div>
-    <form action="/items/{{ items.id }}/delete" method="POST">
-        <input class="item-delete" type="submit" value="delete"/></form>
+        <form action="/items/{{ items.id }}/delete" method="POST">
+            <input class="item-delete" type="submit" value="delete"/></form>
+        </div>
     {% endfor %}
     <br>
     <div class="center-button">
@@ -25,4 +25,5 @@
         <a href="/items/create" class="create-button" type=submit name="add_item">Create New Item</a>
     </button>
     </div>
+</div> 
 {% endblock %}

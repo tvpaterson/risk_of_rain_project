@@ -1,9 +1,22 @@
 .items{
     text-align: center;
+    align-content: center;
     color: whitesmoke;
+    font-family: 'Zen Kurenaido', sans-serif;
 }
 
 .item-delete{
+    /* text-align: center; */
+    /* display: flex; */
+    
+}
+
+.item-image{
+    text-align: center;
+    display: block;
+}
+
+.all-images{
     text-align: center;
     display: block;
 }

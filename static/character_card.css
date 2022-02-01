@@ -6,13 +6,17 @@
 
 }
 
-.character_card{
+.all-characters{
+    display: table-row-group(center);
+    /* grid-auto-rows: auto; */
+    
+    grid-gap: 1rem;
     text-align: center;
     /* box-shadow: 0 0 5px rgb(228, 228, 228); */
  
     border-radius: 4px;
      
-    padding: .5rem;
+    
 }
 
 .character_card a:hover{
