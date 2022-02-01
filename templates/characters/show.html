@@ -22,35 +22,33 @@
 <div class="center-button">
     
     <h3 class="inventory-title"> INVENTORY: </h3>
-    {% for item in items %} 
-
-        {{item.name}}
-
-    {% endfor %} 
 
 </div>
 <br>
  <!-- ITEMS GO HERE --> 
  <div class="item-list">
      <table class="table-items">
-        <tr>
-            <th>ITEM NAME</th>
-            <th>ATTRIBUTE</th>
-            <th>VALUE</th>
-            <th></th>
-          </tr>
-          <tr>
-            <td>Sticky Bomb</td>
-            <td> DMG </td>
-            <td> 10 </td>
+         <tr>
+             <th>ITEM NAME</th>
+             <th>ATTRIBUTE</th>
+             <th>VALUE</th>
+             <th></th>
+            </tr>
+            {% for item in items %} 
+            <tr>
+            <td>{{item.name}} </td>
+            <td> {{item.attribute}} </td>
+            <td> {{item.value}} </td>
             <td><button class="btn"><i class="fa fa-trash"></i></button></td>
+            <br>
+            {% endfor %} 
             
           </tr>
-          <tr>
+          <!-- <tr>
             <td>Bison Steak</td>
             <td> HP </td>
             <td> 25 </td>
-            <td><button class="btn"><i class="fa fa-trash"></i></button></td>
+            <td><button class="btn"><i class="fa fa-trash"></i></button></td> -->
           </tr>
             <!-- <tr> <a>Sticky bomb</a><button class="btn"><i class="fa fa-trash"></i></button> </tr>
             <tr> <a>Bison Steak</a><button class="btn"><i class="fa fa-trash"></i></button> </tr>
