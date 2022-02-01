@@ -44,3 +44,15 @@ def delete(id):
 def delete_all():
     sql = "DELETE FROM characters"
     run_sql(sql)
+
+def items(id):
+    items = []
+    sql = "SELECT * FROM items WHERE character_id = %s"
+    values = [id]
+    results = run_sql(sql, values)
+    # pdb.set_trace()
+    for result in results:
+        character = select(id)
+        item = Item(result['name'], result['attribute'], result['value'], result['description'], character, result['id'])
+        items.append(item)
+    return items

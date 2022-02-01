@@ -14,7 +14,8 @@ def all_characters():
 @characters_blueprint.route("/characters/<id>", methods=["GET"])
 def show_character(id):
     character = character_repository.select(id)
-    return render_template("characters/show.html", character = character)
+    character_items = character_repository.items(id)
+    return render_template("characters/show.html", character = character, items = character_items)
     
 @characters_blueprint.route("/characters/create", methods=["GET"])
 def new_character():

@@ -14,16 +14,24 @@ def save(inventory):
     inventory.id = results[0]['id']
     return inventory
 
-def select_all():
-    items = []
 
-    sql = "SELECT * FROM inventories"
-    results = run_sql(sql)
 
-    for row in results:
-        character = character_repository.select(row['character_id'])
-        item = item_repository.select(row['item_id'])
-        inventory = Inventory(character, item, row['id'])
-        items.append(inventory)
-    return items
+def delete(id):
+    sql = "DELETE FROM inventories WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
 
+
+
+# def select_all():
+#     inventories = []
+
+#     sql = "SELECT * FROM inventories"
+#     results = run_sql(sql)
+
+#     for row in results:
+#         character = character_repository.select(row['character_id'])
+#         item = item_repository.select(row['item_id'])
+#         inventory = Inventory(character, item, row['id'])
+#         inventories.append(inventory)
+#     return inventories

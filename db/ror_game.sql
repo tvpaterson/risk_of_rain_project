@@ -14,8 +14,6 @@ CREATE TABLE items (
   name VARCHAR(255),
   attribute VARCHAR(255),
   value INT,
-  description VARCHAR(255)
-  character_id INT REFERENCES characters(id)
+  description VARCHAR(255),
+  character_id INT REFERENCES characters(id) ON DELETE CASCADE
 );
-
-

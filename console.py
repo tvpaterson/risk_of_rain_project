@@ -46,20 +46,26 @@ character_repository.save(character11)
 character12 = Character('REX', 110, 12, 0)
 character_repository.save(character12)
 
-item1 = Item('Sticky Bomb', 'DMG', 10, 'Chance to throw sticky bomb')
+item1 = Item('Sticky Bomb', 'DMG', 10, 'Chance to throw sticky bomb', character1)
 item_repository.save(item1)
 
-item2 = Item('Topaz Brooch', 'ARM', 20, 'Gain temporary armor')
+item2 = Item('Topaz Brooch', 'ARM', 20, 'Gain temporary armor', character1)
 item_repository.save(item2)
 
-item3 = Item('Medkit', 'HP', 20, 'Gain 20 health')
+item3 = Item('Medkit', 'HP', 20, 'Gain 20 health', character1)
 item_repository.save(item3)
 
-item4 = Item('Bison Steak', 'HP', 25, 'Increase health by 25')
+item4 = Item('Bison Steak', 'HP', 25, 'Increase health by 25', character1)
 item_repository.save(item4)
 
-item5 = Item('Ukulele', 'DMG', 100, 'Permanently increase damage by 100')
+item5 = Item('Ukulele', 'DMG', 100, 'Permanently increase damage by 100', character1)
 item_repository.save(item5)
+
+item6= Item('Sticky Bomb', 'DMG', 10, 'Chance to throw sticky bomb', character2)
+item_repository.save(item6)
+
+item7 = Item('Topaz Brooch', 'ARM', 20, 'Gain temporary armor', character2)
+item_repository.save(item7)
 
 # inventory1 = Inventory(character1, item1)
 # inventory_repository.save(inventory1)
