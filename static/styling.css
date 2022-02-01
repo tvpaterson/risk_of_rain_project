@@ -75,3 +75,9 @@ header {
     color: whitesmoke;
     font-family: 'Zen Kurenaido', sans-serif;
 }
+
+.character-image{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}

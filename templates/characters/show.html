@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='styling.css') }}">
+
+<div class="character-image">
+    <img src="/static/images/{{character.name}}.png">
+</div>
+
 <div class="center-show-char">
 <h3>{{character.name}}</h3>
 <p>HP: {{character.health}}</p>
@@ -16,14 +21,21 @@
     <h3 class="inventory-title"> INVENTORY </h3>
 </div>
 <br>
- <!-- INVENTORY LOOK GOES HERE --> 
+ <!-- ITEMS GO HERE --> 
  <div class="item-list">
- <ul>
+     <table>
+            <tr> <a>Sticky bomb</a><button class="btn"><i class="fa fa-trash"></i></button> </tr>
+            <tr> <a>Bison Steak</a><button class="btn"><i class="fa fa-trash"></i></button> </tr>
+        <a>Bison Steak</a><button class="btn"><i class="fa fa-trash"></i></button>
+        <a>Topaz Brooch</a><button class="btn"><i class="fa fa-trash"></i></button>
+        <a>Bison Steak</a><button class="btn"><i class="fa fa-trash"></i></button>
+        </table>
+ <!-- <ul>
      <li> Sticky Bomb</li><button class="btn"><i class="fa fa-trash"></i></button>
      <li> Bison Steak</li><button class="btn"><i class="fa fa-trash"></i></button>
      <li> Missle launcher</li><button class="btn"><i class="fa fa-trash"></i></button>
      <li> Big Gun</li><button class="btn"><i class="fa fa-trash"></i></button>
- </ul>
+ </ul> -->
 </div>
 <br>
 <form action="/characters/{{ character.id }}/delete" method="POST">

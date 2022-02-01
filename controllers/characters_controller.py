@@ -1,5 +1,3 @@
-from crypt import methods
-from pickletools import read_unicodestring1
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.character import Character

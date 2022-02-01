@@ -7,7 +7,7 @@ CREATE TABLE characters (
   health INT,
   damage INT,
   armor INT,
-  item_id INT REFERENCES items(id)
+  -- item_id INT REFERENCES items(id)
 
 );
 
