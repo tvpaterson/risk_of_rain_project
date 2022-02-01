@@ -15,6 +15,7 @@ CREATE TABLE items (
   attribute VARCHAR(255),
   value INT,
   description VARCHAR(255)
+  character_id INT REFERENCES characters(id)
 );
 
 
