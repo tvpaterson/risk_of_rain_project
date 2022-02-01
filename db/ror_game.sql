@@ -2,11 +2,13 @@ DROP TABLE items;
 DROP TABLE characters;
 
 CREATE TABLE characters (
-  id SERIAL PRIMARY KEY,  
+  id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   health INT,
   damage INT,
-  armor INT
+  armor INT,
+  item_id INT REFERENCES items(id)
+
 );
 
 CREATE TABLE items (
