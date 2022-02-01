@@ -6,9 +6,7 @@ CREATE TABLE characters (
   name VARCHAR(255),
   health INT,
   damage INT,
-  armor INT,
-  -- item_id INT REFERENCES items(id)
-
+  armor INT
 );
 
 CREATE TABLE items (

@@ -15,21 +15,44 @@
 <form action="/characters/{{character.id}}/edit">
     <input class="create-button" type="submit" value="Edit">
 </form>
+<form action="/characters/{{ character.id }}/delete" method="POST">
+    <input class="create-button" type="submit" value="Delete">
+</form>
 <br>
 <div class="center-button">
     
-    <h3 class="inventory-title"> INVENTORY </h3>
+    <h3 class="inventory-title"> INVENTORY: </h3>
 </div>
 <br>
  <!-- ITEMS GO HERE --> 
  <div class="item-list">
-     <table>
-            <tr> <a>Sticky bomb</a><button class="btn"><i class="fa fa-trash"></i></button> </tr>
+     <table class="table-items">
+        <tr>
+            <th>ITEM NAME</th>
+            <th>ATTRIBUTE</th>
+            <th>VALUE</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>Sticky Bomb</td>
+            <td> DMG </td>
+            <td> 10 </td>
+            <td><button class="btn"><i class="fa fa-trash"></i></button></td>
+            
+          </tr>
+          <tr>
+            <td>Bison Steak</td>
+            <td> HP </td>
+            <td> 25 </td>
+            <td><button class="btn"><i class="fa fa-trash"></i></button></td>
+          </tr>
+            <!-- <tr> <a>Sticky bomb</a><button class="btn"><i class="fa fa-trash"></i></button> </tr>
             <tr> <a>Bison Steak</a><button class="btn"><i class="fa fa-trash"></i></button> </tr>
         <a>Bison Steak</a><button class="btn"><i class="fa fa-trash"></i></button>
         <a>Topaz Brooch</a><button class="btn"><i class="fa fa-trash"></i></button>
-        <a>Bison Steak</a><button class="btn"><i class="fa fa-trash"></i></button>
+        <a>Bison Steak</a><button class="btn"><i class="fa fa-trash"></i></button> -->
         </table>
+
  <!-- <ul>
      <li> Sticky Bomb</li><button class="btn"><i class="fa fa-trash"></i></button>
      <li> Bison Steak</li><button class="btn"><i class="fa fa-trash"></i></button>
@@ -38,7 +61,4 @@
  </ul> -->
 </div>
 <br>
-<form action="/characters/{{ character.id }}/delete" method="POST">
-    <input class="create-button" type="submit" value="Delete">
-</form>
 {% endblock %}
