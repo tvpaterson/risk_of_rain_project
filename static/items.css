@@ -1,4 +1,5 @@
 .items{
+    display: grid;
     text-align: center;
     align-content: center;
     color: whitesmoke;
@@ -19,4 +20,9 @@
 .all-images{
     text-align: center;
     display: block;
+}
+
+
+.individual-item {
+    
 }

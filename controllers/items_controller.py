@@ -30,5 +30,5 @@ def create_item():
 @items_blueprint.route("/items/<id>/delete", methods=['POST'])
 def delete_item(id):
     item_repository.delete(id)
-    return redirect('/items')
+    return redirect('/characters')
     

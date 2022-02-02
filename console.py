@@ -89,11 +89,26 @@ item_repository.save(item14)
 item15 = Item('Sticky Bomb', 'DMG', 10, 'Chance to throw sticky bomb', character7)
 item_repository.save(item15)
 
+item16 = Item('Medkit', 'HP', 20, 'Gain 20 health', character8)
+item_repository.save(item16)
+
+item17 = Item('Bison Steak', 'HP', 25, 'Increase health by 25', character8)
+item_repository.save(item17)
+
+item18 = Item('Bison Steak', 'HP', 25, 'Increase health by 25', character9)
+item_repository.save(item18)
+
+item16 = Item('Sticky Bomb', 'DMG', 10, 'Chance to throw sticky bomb', character10)
+item_repository.save(item16)
+
+item17 = Item('Ukulele', 'DMG', 100, 'Permanently increase damage by 100', character11)
+item_repository.save(item17)
+
 
 # inventory1 = Inventory(character1, item1)
 # inventory_repository.save(inventory1)
 
-print(character11)
+print(character1)
 # print(inventory1)
 
 # pdb.set_trace()

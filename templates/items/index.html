@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/static/items.css">
 {% extends 'base.html' %}
 {% block content %}
-{% for items in items %}
+<!-- {% for items in items %}
 
     <div class="items">
         <div class="item">
@@ -18,12 +18,59 @@
         <form action="/items/{{ items.id }}/delete" method="POST">
             <input class="item-delete" type="submit" value="delete"/></form>
         </div>
-    {% endfor %}
+    {% endfor %} -->
+    <div class="items">
+        <div class="item">
+            <ul>
+            <div class="individual-item">
+                <img src="/static/images/Test.png" class="item-image">
+                <br>
+                <h4> Topaz Brooch</h4>
+                <i> HP </i>
+                <p> 20 </p>
+                <i> Gain temporary armor</i>
+                <br>
+            </div>
+            <div class="individual-item"></div>
+                <img src="/static/images/Sticky_Bomb.png">
+                <br>
+                <h4> Sticky Bomb </h4>
+                <i> DMG </i>
+                <p> 10 </p>
+                <i> Chance to throw sticky bomb </i>
+                <br>
+            </div>
+                <img src="/static/images/Medkit.png">
+                <br>
+                <h4> Medkit </h4>
+                <i> HP </i>
+                <p> 10 </p>
+                <i> Gain 20 health</i>
+                <br>
+                <img src="/static/images/Bison_Steak.png">
+                <br>
+                <h4> Bison Steak</h4>
+                <i> HP </i>
+                <p> 25 </p>
+                <i> Increase health by 25 </i>
+                
+                <br>
+                <img src="/static/images/Ukulele.png">
+                <br>
+                <h4>  Ukulele </h4>
+                <i> DMG </i>
+                <p> 100 </p>
+                <i> Permanently increase damage by 100 </i>
+
+
+            </ul>
+        </div>
+    </div>
     <br>
     <div class="center-button">
-    <button>
+    <!-- <button>
         <a href="/items/create" class="create-button" type=submit name="add_item">Create New Item</a>
-    </button>
+    </button> -->
     </div>
 </div> 
 {% endblock %}

@@ -54,7 +54,7 @@ def delete_character(id):
     character_repository.delete(id)
     return redirect('/characters')
 
-@characters_blueprint.route("/items/<id>/delete", methods=['POST'])
+@characters_blueprint.route("/items/<id>/edit", methods=['POST'])
 def delete_item(id):
     item_repository.delete(id)
     return redirect("/characters")

@@ -14,7 +14,12 @@
     <br>
     <label for="hp"> ARM:</label>
     <input value="{{character.armor}}"type="text" id="arm" name="character_armor" required autofocus>
-
+    <br>
+    {% for item in items %}
+    <select name="items" id="items">
+      <option> {{item.name}}</option>
+    </select>
+    {% endfor %}
     <button type='submit'>Update</button>
   </div>
 {% endblock %}
