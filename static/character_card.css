@@ -8,12 +8,8 @@
 
 .all-characters{
     display: table-row-group(center);
-    /* grid-auto-rows: auto; */
-    
-    grid-gap: 1rem;
+     grid-gap: 1rem;
     text-align: center;
-    /* box-shadow: 0 0 5px rgb(228, 228, 228); */
- 
     border-radius: 4px;
      
     

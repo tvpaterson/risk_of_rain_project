@@ -7,14 +7,6 @@ from controllers.items_controller import items_blueprint
 def home():
     return render_template('index.html')
 
-# @app.route('/characters')
-# def characters():
-#     return render_template('/characters/index.html')
-
-# @app.route('/items')
-# def items():
-#     return render_template('/items/index.html')
-
 if __name__ == '__main__':
     app.run(debug=True)
 

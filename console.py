@@ -1,13 +1,10 @@
 import pdb
 from models.character import Character
 from models.item import Item
-# from models.inventory import Inventory
+
 import repositories.character_repository as character_repository
 import repositories.item_repository as  item_repository
-# import repositories.inventory_repository as inventory_repository
 
-# character_repository.delete_all()
-# item_repository.delete_all()
 
 
 character1 = Character('COMMANDO', 110, 12, 0)
@@ -105,10 +102,5 @@ item17 = Item('Ukulele', 'DMG', 100, 'Permanently increase damage by 100', chara
 item_repository.save(item17)
 
 
-# inventory1 = Inventory(character1, item1)
-# inventory_repository.save(inventory1)
 
 print(character1)
-# print(inventory1)
-
-# pdb.set_trace()
