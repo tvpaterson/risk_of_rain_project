@@ -2,6 +2,7 @@
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='styling.css') }}">
 
+<div class="info">
 <form action="/characters/{{character.id}}/update" method="post">
     <label for="name">NAME:</label>
     <input value="{{character.name}}"type="text" id="name" name="character_name" required autofocus>
@@ -22,6 +23,7 @@
     {% endfor %}
     <button type='submit'>Update</button>
   </div>
+</div>
 {% endblock %}
 
 <!-- <form action="/tasks/{{task.id}}" method="post">

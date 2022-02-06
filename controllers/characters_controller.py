@@ -39,6 +39,13 @@ def update_character(id):
     character_repository.update(character)
     return redirect('/characters')
 
+
+# GET NAME FROM USER
+# GET HEALTH FROM USER
+# GET DAMAGE FROM USER
+# GET ARMOR FROM USER
+# SAVE THE CHARACTER TO THE LIST OF CHARACTERS IN DATABASE
+# TAKE USER BACK TO CHARACTERS PAGE
 @characters_blueprint.route("/characters", methods=['POST'])
 def create_character():
     name = request.form['character_name']

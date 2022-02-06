@@ -9,15 +9,16 @@
 
 .item-image{
     text-align: center;
-    display: block;
+    /* display: block; */
 }
 
-.all-images{
+/* .all-images{
     text-align: center;
     display: block;
-}
+} */
 
 
 .individual-item {
     display: grid;
+    text-align: center;
 }

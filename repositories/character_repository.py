@@ -31,11 +31,14 @@ def select_all():
         characters.append(character)
     return characters
 
+
 def update(character):
     sql = "UPDATE characters SET (name, health, damage, armor) = (%s, %s, %s, %s) WHERE id = %s"
     values = [character.name, character.health, character.damage, character.armor, character.id]
     run_sql(sql, values)
 
+# FROM CHARACTER LIST
+# DELETE CHRACTER BY SPECIFIED ID NUMBER
 def delete(id):
     sql = "DELETE FROM characters WHERE id = %s"
     values = [id]
